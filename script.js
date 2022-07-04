@@ -7,9 +7,7 @@ const adviceText = document.querySelector(".advice-container");
 const adviceGenerator = async event =>{
     event.preventDefault();
 try{
-    await fetch('https://api.adviceslip.com/advice',{
-        method: 'GET'
-    })
+     fetch('https://api.adviceslip.com/advice',{cache: "no-store"})
 
 
 .then(response => response.json())
